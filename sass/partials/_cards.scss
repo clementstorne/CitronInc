@@ -1,0 +1,48 @@
+.cards {
+  text-align: center;
+}
+.product {
+  display: inline-block;
+  vertical-align: top;
+  width: 12.5rem;
+  min-height: 20rem;
+  background-color: $ultra-light;
+  color: $dark;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  text-align: left;
+  box-shadow: 2px 2px 2px 2px #888;
+  transition: box-shadow 1s;
+  &:hover {
+    box-shadow: 4px 4px 2px 2px #888;
+  }
+}
+.step {
+  display: inline-block;
+  vertical-align: top;
+  width: 12.5rem;
+  padding: 0.5rem;
+  margin: 0.25rem;
+}
+.client {
+  display: inline-block;
+  vertical-align: top;
+  width: 12.5rem;
+  background-color: $dark;
+  color: $ultra-light;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  text-align: left;
+  box-shadow: 0 0 2px 2px $dark;
+  img {
+    background-color: $ultra-light;
+    border-radius: 50%;
+  }
+}
+.product img,
+.step img,
+.client img {
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  width: 12.5rem;
+}

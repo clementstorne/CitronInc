@@ -1,0 +1,24 @@
+#presentation,
+#production,
+#contact {
+  color: $ultra-light;
+  background-color: #000;
+  background-size: cover;
+  min-height: 90%;
+  box-sizing: border-box;
+}
+#presentation {
+  background-image: url("img/bg-presentation.jpg");
+}
+#production {
+  background-image: url("img/bg-production.jpg");
+}
+#contact {
+  background-image: url("img/bg-contact.jpg");
+}
+#description {
+  max-width: 22rem;
+  @include large-screen {
+    max-width: 48%;
+  }
+}

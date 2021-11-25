@@ -1,0 +1,54 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: $body-font;
+  line-height: 1.5em;
+  color: $dark;
+  background-color: $light;
+  margin: auto;
+}
+
+h1,
+h2 {
+  font-family: $head-font;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 1.5em;
+}
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+section {
+  padding: 1rem;
+  overflow: hidden;
+}
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  font-style: italic;
+  &:before,
+  &:after {
+    content: '"';
+  }
+}
+.quote {
+  text-align: right;
+  margin: 1rem 0;
+  blockquote {
+    font-size: 3rem;
+    line-height: 1em;
+  }
+  figcaption {
+    font-family: $head-font;
+    margin-top: 1rem;
+    &:before {
+      content: "– ";
+    }
+  }
+}

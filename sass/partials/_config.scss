@@ -1,0 +1,47 @@
+$color: #ff0;
+$color-hover: #ff4;
+$dark: #222;
+$dark-hover: #444;
+$light: #eee;
+$ultra-light: #fff;
+$head-font: "Grand Hotel", serif;
+$body-font: "Open Sans", Helvetica, Arial, sans-serif;
+$small-screen: "screen and (max-width: 540px)";
+$large-screen: "screen and (max-width: 740px)";
+
+@mixin small-screen {
+  @media screen and (max-width: 540px) {
+    @content;
+  }
+}
+@mixin large-screen {
+  @media screen and (min-width: 740px) {
+    @content;
+  }
+}
+
+$bp-S: 500px;
+$bp-M: 980px;
+$bp-L: 1250px;
+
+@mixin breakpoint($bp) {
+  @if $bp == xsmall {
+    @media screen and (max-width: $bp-S) {
+      @content;
+    }
+  } @else if $bp == small {
+    @media screen and (min-width: $bp-S) {
+      @content;
+    }
+  } @else if $bp == medium {
+    @media screen and (min-width: $bp-M) {
+      @content;
+    }
+  } @else if $bp == large {
+    @media screen and (min-width: $bp-L) {
+      @content;
+    }
+  } @else {
+    @error "L'argument $appareil ne peut valoir que xsmall, small, medium ou large.";
+  }
+}

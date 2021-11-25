@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*===============RESET CSS==============*/
 html,
 body,
 div,
@@ -131,8 +130,58 @@ table {
   border-spacing: 0;
 }
 
-/*===============VARIABLES==============*/
-/*===============GENERAL/TYPO==============*/
+#produits .more,
+#clients .more {
+  font-family: "Grand Hotel", serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem;
+  width: 12.5rem;
+  border: none;
+  display: block;
+  margin: 0.5rem auto 0;
+  background-color: #fff;
+  color: #222;
+}
+#produits .more:hover,
+#clients .more:hover {
+  background-color: #444;
+}
+@media screen and (min-width: 740px) {
+  #produits .more,
+#clients .more {
+    display: inline-block;
+    float: right;
+  }
+}
+
+#production .more,
+#contact button {
+  font-family: "Grand Hotel", serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem;
+  width: 12.5rem;
+  border: none;
+  display: block;
+  margin: 0.5rem auto 0;
+  background-color: #ff0;
+  color: #222;
+}
+#production .more:hover,
+#contact button:hover {
+  background-color: #ff4;
+}
+@media screen and (min-width: 740px) {
+  #production .more,
+#contact button {
+    display: inline-block;
+    float: right;
+  }
+}
+
 html,
 body {
   height: 100%;
@@ -193,39 +242,59 @@ blockquote:before, blockquote:after {
   content: "– ";
 }
 
-/*==============SECTIONS AVEC BG==============*/
-#presentation,
-#production,
-#contact {
+.cards {
+  text-align: center;
+}
+
+.product {
+  display: inline-block;
+  vertical-align: top;
+  width: 12.5rem;
+  min-height: 20rem;
+  background-color: #fff;
+  color: #222;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  text-align: left;
+  box-shadow: 2px 2px 2px 2px #888;
+  transition: box-shadow 1s;
+}
+.product:hover {
+  box-shadow: 4px 4px 2px 2px #888;
+}
+
+.step {
+  display: inline-block;
+  vertical-align: top;
+  width: 12.5rem;
+  padding: 0.5rem;
+  margin: 0.25rem;
+}
+
+.client {
+  display: inline-block;
+  vertical-align: top;
+  width: 12.5rem;
+  background-color: #222;
   color: #fff;
-  background-color: #000;
-  background-size: cover;
-  min-height: 90%;
-  box-sizing: border-box;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  text-align: left;
+  box-shadow: 0 0 2px 2px #222;
+}
+.client img {
+  background-color: #fff;
+  border-radius: 50%;
 }
 
-#presentation {
-  background-image: url("img/bg-presentation.jpg");
+.product img,
+.step img,
+.client img {
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  width: 12.5rem;
 }
 
-#production {
-  background-image: url("img/bg-production.jpg");
-}
-
-#contact {
-  background-image: url("img/bg-contact.jpg");
-}
-
-#description {
-  max-width: 22rem;
-}
-@media screen and (max-width: 740px) {
-  #description {
-    max-width: 48%;
-  }
-}
-
-/*==============HEADER & FOOTER==============*/
 header,
 footer {
   background-color: #222;
@@ -298,7 +367,37 @@ footer {
   }
 }
 
-/*================CONTACT================*/
+#presentation,
+#production,
+#contact {
+  color: #fff;
+  background-color: #000;
+  background-size: cover;
+  min-height: 90%;
+  box-sizing: border-box;
+}
+
+#presentation {
+  background-image: url("img/bg-presentation.jpg");
+}
+
+#production {
+  background-image: url("img/bg-production.jpg");
+}
+
+#contact {
+  background-image: url("img/bg-contact.jpg");
+}
+
+#description {
+  max-width: 22rem;
+}
+@media screen and (min-width: 740px) {
+  #description {
+    max-width: 48%;
+  }
+}
+
 #contact form {
   max-width: 708px;
   overflow: hidden;
@@ -318,101 +417,6 @@ footer {
 
 label {
   font-weight: bold;
-}
-
-/*================BOUTONS================*/
-.more,
-#contact button {
-  font-family: "Grand Hotel", serif;
-  font-size: 1.25rem;
-  text-decoration: none;
-  text-align: center;
-  padding: 0.5rem;
-  width: 12.5rem;
-  border: none;
-  display: block;
-  margin: 0.5rem auto 0;
-}
-
-#produits .more,
-#clients .more {
-  background-color: #222;
-  color: #fff;
-}
-#produits .more:hover,
-#clients .more:hover {
-  background-color: #444;
-}
-
-#production .more,
-#contact button {
-  background-color: #ff0;
-  color: #222;
-}
-@media screen and (max-width: 740px) {
-  #production .more,
-#contact button {
-    display: inline-block;
-    float: right;
-  }
-}
-#production .more:hover,
-#contact button:hover {
-  background-color: #ff4;
-}
-
-/*===============CARTES================*/
-.cards {
-  text-align: center;
-}
-
-.product {
-  display: inline-block;
-  vertical-align: top;
-  width: 12.5rem;
-  min-height: 20rem;
-  background-color: #fff;
-  color: #222;
-  padding: 0.5rem;
-  margin: 0.25rem;
-  text-align: left;
-  box-shadow: 2px 2px 2px 2px #888;
-  transition: box-shadow 1s;
-}
-.product:hover {
-  box-shadow: 4px 4px 2px 2px #888;
-}
-
-.step {
-  display: inline-block;
-  vertical-align: top;
-  width: 12.5rem;
-  padding: 0.5rem;
-  margin: 0.25rem;
-}
-
-.client {
-  display: inline-block;
-  vertical-align: top;
-  width: 12.5rem;
-  background-color: #222;
-  color: #fff;
-  padding: 0.5rem;
-  margin: 0.25rem;
-  text-align: left;
-  box-shadow: 0 0 2px 2px #222;
-}
-.client img {
-  background-color: #fff;
-  border-radius: 50%;
-}
-
-.product img,
-.step img,
-.client img {
-  display: block;
-  margin: 0 auto 0.5rem auto;
-  width: 12.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

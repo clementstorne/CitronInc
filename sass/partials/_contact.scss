@@ -1,0 +1,18 @@
+#contact form {
+  max-width: 708px;
+  overflow: hidden;
+}
+#email,
+#content {
+  font-family: $body-font;
+  font-size: 1.25rem;
+  resize: none;
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: $dark;
+}
+label {
+  font-weight: bold;
+}
