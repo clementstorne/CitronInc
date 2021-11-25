@@ -9,8 +9,8 @@
 }
 $sections: "presentation", "production", "contact";
 @each $section in $sections {
-  #section-#{nth($section, $i)} {
-    background-image: url("img/bg-" + nth($section, $i) + ".png");
+  #section-#{$section} {
+    background-image: url("img/bg-" + $section + ".png");
   }
 }
 #description {

@@ -377,16 +377,16 @@ footer {
   box-sizing: border-box;
 }
 
-#presentation {
-  background-image: url("img/bg-presentation.jpg");
+#section-presentation {
+  background-image: url("img/bg-presentation.png");
 }
 
-#production {
-  background-image: url("img/bg-production.jpg");
+#section-production {
+  background-image: url("img/bg-production.png");
 }
 
-#contact {
-  background-image: url("img/bg-contact.jpg");
+#section-contact {
+  background-image: url("img/bg-contact.png");
 }
 
 #description {
