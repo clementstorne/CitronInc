@@ -123,6 +123,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/*===============VARIABLES==============*/
+
+$color: #ff0;
+$color-hover: #ff4;
+$dark: #222;
+$dark-hover: #444;
+$light: #eee;
+$ultra-light: #fff;
+$head-font: "Grand Hotel", serif;
+$body-font: "Open Sans", Helvetica, Arial, sans-serif;
+$small-screen: "screen and (max-width: 540px)";
+$large-screen: "screen and (max-width: 740px)";
 
 /*===============GENERAL/TYPO==============*/
 html,
@@ -130,16 +142,16 @@ body {
   height: 100%;
 }
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: $body-font;
   line-height: 1.5em;
-  color: #222;
-  background-color: #eee;
+  color: $dark;
+  background-color: $light;
   margin: auto;
 }
 
 h1,
 h2 {
-  font-family: "Grand Hotel", serif;
+  font-family: $head-font;
 }
 h1 {
   font-size: 3rem;
@@ -172,7 +184,7 @@ blockquote {
     line-height: 1em;
   }
   figcaption {
-    font-family: "Grand Hotel", serif;
+    font-family: $head-font;
     margin-top: 1rem;
     &:before {
       content: "– ";
@@ -184,7 +196,7 @@ blockquote {
 #presentation,
 #production,
 #contact {
-  color: #fff;
+  color: $ultra-light;
   background-color: #000;
   background-size: cover;
   min-height: 90%;
@@ -201,7 +213,7 @@ blockquote {
 }
 #description {
   max-width: 22rem;
-  @media screen and (min-width: 740px) {
+  @media #{$large-screen} {
     max-width: 48%;
   }
 }
@@ -209,8 +221,8 @@ blockquote {
 /*==============HEADER & FOOTER==============*/
 header,
 footer {
-  background-color: #222;
-  color: #fff;
+  background-color: $dark;
+  color: $ultra-light;
   min-height: 10%;
   padding: 0.5rem;
   box-sizing: border-box;
@@ -219,14 +231,14 @@ footer {
 #hgroup {
   float: left;
   h1 {
-    color: #ff0;
+    color: $color;
     font-size: 2em;
     line-height: 1em;
   }
   p {
     font-style: italic;
   }
-  @media screen and (max-width: 540px) {
+  @media #{$small-screen} {
     float: none;
     text-align: center;
   }
@@ -236,14 +248,14 @@ footer {
   margin-top: 0.75em;
   position: relative;
   input {
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: $body-font;
     font-size: 1.25rem;
     height: 2rem;
     width: 10rem;
     box-sizing: border-box;
     border: none;
-    background-color: #fff;
-    color: #222;
+    background-color: $ultra-light;
+    color: $dark;
     float: left;
     padding: 0;
   }
@@ -266,7 +278,7 @@ footer {
       margin: 0;
     }
   }
-  @media screen and (max-width: 540px) {
+  @media #{$small-screen} {
     float: none;
     width: 12rem;
     margin: 1rem auto 0;
@@ -280,14 +292,14 @@ footer {
 }
 #email,
 #content {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: $body-font;
   font-size: 1.25rem;
   resize: none;
   display: block;
   width: 100%;
   border: none;
   background-color: rgba(255, 255, 255, 0.8);
-  color: #222;
+  color: $dark;
 }
 label {
   font-weight: bold;
@@ -296,7 +308,7 @@ label {
 /*================BOUTONS================*/
 .more,
 #contact button {
-  font-family: "Grand Hotel", serif;
+  font-family: $head-font;
   font-size: 1.25rem;
   text-decoration: none;
   text-align: center;
@@ -309,22 +321,22 @@ label {
 
 #produits .more,
 #clients .more {
-  background-color: #222;
-  color: #fff;
+  background-color: $dark;
+  color: $ultra-light;
   &:hover {
-    background-color: #444;
+    background-color: $dark-hover;
   }
 }
 #production .more,
 #contact button {
-  background-color: #ff0;
-  color: #222;
-  @media screen and (min-width: 740px) {
+  background-color: $color;
+  color: $dark;
+  @media #{$large-screen} {
     display: inline-block;
     float: right;
   }
   &:hover {
-    background-color: #ff4;
+    background-color: $color-hover;
   }
 }
 
@@ -337,8 +349,8 @@ label {
   vertical-align: top;
   width: 12.5rem;
   min-height: 20rem;
-  background-color: #fff;
-  color: #222;
+  background-color: $ultra-light;
+  color: $dark;
   padding: 0.5rem;
   margin: 0.25rem;
   text-align: left;
@@ -359,14 +371,14 @@ label {
   display: inline-block;
   vertical-align: top;
   width: 12.5rem;
-  background-color: #222;
-  color: #fff;
+  background-color: $dark;
+  color: $ultra-light;
   padding: 0.5rem;
   margin: 0.25rem;
   text-align: left;
-  box-shadow: 0 0 2px 2px #222;
+  box-shadow: 0 0 2px 2px $dark;
   img {
-    background-color: #fff;
+    background-color: $ultra-light;
     border-radius: 50%;
   }
 }

@@ -131,6 +131,7 @@ table {
   border-spacing: 0;
 }
 
+/*===============VARIABLES==============*/
 /*===============GENERAL/TYPO==============*/
 html,
 body {
@@ -218,7 +219,7 @@ blockquote:before, blockquote:after {
 #description {
   max-width: 22rem;
 }
-@media screen and (min-width: 740px) {
+@media screen and (max-width: 740px) {
   #description {
     max-width: 48%;
   }
@@ -348,7 +349,7 @@ label {
   background-color: #ff0;
   color: #222;
 }
-@media screen and (min-width: 740px) {
+@media screen and (max-width: 740px) {
   #production .more,
 #contact button {
     display: inline-block;
